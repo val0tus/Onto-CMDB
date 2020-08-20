@@ -1,0 +1,1779 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#"
+     xml:base="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:opla-sd="http://ontologydesignpatterns.org/opla-sd#"
+     xmlns:ontodebug="http://ainf.aau.at/ontodebug#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB">
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPDX SubClassOf ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU and Product SubClassOf ManagedElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer Domain ManagedElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer Domain SoftwareIdentity</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range Product</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range FRU</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range SoftwareIdentity</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range SPDX</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range PhysicalElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range ManagedSystemElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range ManagedElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasLocation Range SoftwareIdentity</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith SPDX</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPDX EquivalentTo SWID</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caption Domain FRU</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family Domain FRU</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caption Domain Location</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OperatingStatus Domain PhysicalElement</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OperatingStatus DisjointWith SoftwareIdentity</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classifications DisjointWith OperatingStatus</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown Type Classifications</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classifications SubClassOf Product</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WarrantyDuration Domain SPDX</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product DisjointWith SoftwareIdentity</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+        <ontodebug:testCase>
+            <rdf:Description>
+                <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WarrantyDuration Domain SoftwareIdentity</ontodebug:axiom>
+                <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+            </rdf:Description>
+        </ontodebug:testCase>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#axiom -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#axiom">
+        <rdfs:subPropertyOf rdf:resource="http://ainf.aau.at/ontodebug#testCase"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#testCase -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#testCase"/>
+    
+
+
+    <!-- http://ainf.aau.at/ontodebug#type -->
+
+    <owl:AnnotationProperty rdf:about="http://ainf.aau.at/ontodebug#type">
+        <rdfs:subPropertyOf rdf:resource="http://ainf.aau.at/ontodebug#testCase"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla-sd#entityPosition -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPosition"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla-sd#entityPositionX -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPositionX"/>
+    
+
+
+    <!-- http://ontologydesignpatterns.org/opla-sd#entityPositionY -->
+
+    <owl:AnnotationProperty rdf:about="http://ontologydesignpatterns.org/opla-sd#entityPositionY"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasFRU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasFRU">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Address">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address is a free-form string indicating a street, building, or other type of address for the location of the PhysicalElement.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Caption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Caption">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Caption property is a short textual description (one- line string) of the object.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Description property provides a textual description of the object.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ElementName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ElementName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user-friendly name for the object. This property allows each instance to define a user-friendly name in addition to its key properties, identity data, and description information. Note that the Name property of ManagedSystemElement is also defined as a user-friendly name.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#EntitlementRequiredIndicator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#EntitlementRequiredIndicator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies whether this application needs to match up with an entitlement for a reconciliation to be considered successful. Specifies if an entitlement is required to reconcile this application. See ISO/IEC 19770-2:2009 for guidance.
+Example data format:
+XX = entitlement status (true = entitlement required; false = no entitlement required)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ExtendedResourceType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ExtendedResourceType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The binary format type of the installation package of the software.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRUNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRUNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU ordering information.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Family -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Family">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family that the product belongs to. A family refers to a set of products that are similar but not identical from a hardware or software point of view. Typically, a family is composed of different products, which have different configurations and pricing points. Products in the same family often have similar branding and cosmetic features.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FullName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FullName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For example: MIT License or Apache License 2.0</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Generation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Generation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generation is an optional, monotonically increasing property that may be used to identify a particular generation of the resource represented by this class.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#IdentifyingNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#IdentifyingNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU identification such as a serial number on software or a die number on a hardware chip.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#InstallDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#InstallDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A datetime value that indicates when the object was installed. Lack of a value does not indicate that the object is not installed.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#LargeBuildNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#LargeBuildNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The build number of the software</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MajorVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MajorVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The major number component of the software&apos;s version information - for example, &apos;12&apos; from version 12.1(3)T. This property is defined as a numeric value to allow the determination of &apos;newer&apos; vs. &apos;older&apos; releases. A &apos;newer&apos; major release is indicated by a larger numeric value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManufactureDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManufactureDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date that this PhysicalElement was manufactured</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the organization responsible for producing the PhysicalElement. This organization might be the entity from whom the Element is purchased, but this is not necessarily true. The latter information is contained in the Vendor property of Product.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MinorVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MinorVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minor number component of the software&apos;s version information - for example, &apos;1&apos; from version 12.1(3)T. This property is defined as a numeric value to allow the determination of &apos;newer&apos; vs. &apos;older&apos; releases. A &apos;newer&apos; minor release is indicated by a larger numeric value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Model -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Model">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name by which the PhysicalElement is generally known</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Name property defines the label by which the object is known.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Notes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Notes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Additional information about the license.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OtherIdentifyingInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OtherIdentifyingInfo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OtherIdentifyingInfo captures data in addition to Tag information. This information could be used to identify a Physical Element. One example is bar code data associated with an Element that also has an asset tag.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PartNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PartNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The part number assigned by the organization that is responsible for producing or manufacturing the PhysicalElement.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalPosition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Position is a free-form string that indicates the placement of a PhysicalElement. It can specify slot information on a HostingBoard, mounting site in a Cabinet, or latitude and longitude information, for example, from a GPS. It is part of the key of the Location object.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrimaryStatus provides a high level status value, intended to align with Red-Yellow-Green type representation of status. It should be used in conjunction with DetailedStatus to provide high level and detailed health status of the ManagedElement and its subcomponents. PrimaryStatus consists of one of the following values: Unknown, OK, Degraded or Error. &quot;Unknown&quot; indicates the implementation is in general capable of returning this property, but is unable to do so at this time. &quot;OK&quot; indicates the ManagedElement is functioning normally. &quot;Degraded&quot; indicates the ManagedElement is functioning below normal. &quot;Error&quot; indicates the ManagedElement is in an Error condition.
+
+Values:Unknown, OK, Degraded, Error</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ProductTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ProductTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the application. Accurately identifies the application. See ISO/IEC 19770-2:2009 for guidance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ProductVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ProductVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accurately identifies the application version. Identifies the application version using two values – numeric version and version string. See ISO/IEC 19770-2:2009 for guidance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ReleaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ReleaseDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date the software was released.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#RevisionLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#RevisionLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The FRU&apos;s revision level.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#RevisionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#RevisionNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The revision or maintenance release component of the software&apos;s version information - for example, &apos;3&apos; from version 12.1(3)T. This property is defined as a numeric value to allow the determination of &apos;newer&apos; vs. &apos;older&apos; releases. A &apos;newer&apos; revision is indicated by a larger numeric value.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SKU -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SKU">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The stock-keeping unit number.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SerialNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SerialNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A manufacturer-allocated number used to identify the Physical Element.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ShortIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ShortIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A license identifier is a human readable short text string that uniquely identifies a license. For example: MIT</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareCreator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareCreator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the creator of the software.Identifies the application creator.See ISO/IEC 19770-2:2009 for guidance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the specific version of a specific application. Accurately identifies the application. See ISO/IEC 19770-2:2009 for guidance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareLicensor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareLicensor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the licensor who owns the software copyright. See ISO/IEC 19770-2:2009 for guidance.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Tag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Tag">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An arbitrary string that uniquely identifies the Physical Element and serves as the key of the Element. The Tag property can contain information such as asset tag or serial number data. The key for PhysicalElement is placed very high in the object hierarchy in order to independently identify the hardware or entity, regardless of physical placement in or on Cabinets, Adapters, and so on. For example, a hotswappable or removable component can be taken from its containing (scoping) package and be temporarily unused. The object still continues to exist and can even be inserted into a different scoping container. Therefore, the key for Physical Element is an arbitrary string and is defined independently of any placement or location-oriented hierarchy.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#TagCreator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#TagCreator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identifies the tag creator.Identifies the tag creator. See ISO/IEC 19770-2:2009 for guidance.
+Example data format:
+“regid.2007-01.com.agnitioadvisors,BU-A”
+where:
+regid = registered id
+2007-01 = the year and first month the domain was registered (yyyy-mm)
+com = the upper level domain
+AgnitioAdvisors = the domain name
+BU-A = the sub-unit creating the SWID tag
+xxx = the name of the business unit (BU) that created the SWID tag
+Note that everything after the comma ‘,’ is optional and only required if a software title is specific to a particular business unite.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#TargetOperatingSystems -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#TargetOperatingSystems">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifies the target operating systems of the software.
+
+Unknown, Other, MACOS, ATTUNIX, DGUX, DECNT, Tru64 UNIX, OpenVMS, HPUX, AIX, MVS, OS400, OS/2, JavaVM, MSDOS, WIN3x, WIN95, WIN98, WINNT, WINCE, NCR3000, NetWare, OSF, DC/OS, Reliant UNIX, SCO UnixWare, SCO OpenServer, Sequent, IRIX, Solaris, SunOS, U6000, ASERIES, HP NonStop OS, HP NonStop OSS, BS2000, LINUX, Lynx, XENIX, VM, Interactive UNIX, BSDUNIX, FreeBSD, NetBSD, GNU Hurd, OS9, MACH Kernel, Inferno, QNX, EPOC, IxWorks, VxWorks, MiNT, BeOS, HP MPE, NextStep, PalmPilot, Rhapsody, Windows 2000, Dedicated, OS/390, VSE, TPF, Windows (R) Me, Caldera Open UNIX, OpenBSD, Not Applicable, Windows XP, z/OS, Microsoft Windows Server 2003, Microsoft Windows Server 2003 64-Bit, Windows XP 64-Bit, Windows XP Embedded, Windows Vista, Windows Vista 64-Bit, Windows Embedded for Point of Service, Microsoft Windows Server 2008, Microsoft Windows Server 2008 64-Bit, FreeBSD 64-Bit, RedHat Enterprise Linux, RedHat Enterprise Linux 64-Bit, Solaris 64-Bit, SUSE, SUSE 64-Bit, SLES, SLES 64-Bit, Novell OES, Novell Linux Desktop, Sun Java Desktop System, Mandriva, Mandriva 64-Bit, TurboLinux, TurboLinux 64-Bit, Ubuntu, Ubuntu 64-Bit, Debian, Debian 64-Bit, Linux 2.4.x, Linux 2.4.x 64-Bit, Linux 2.6.x, Linux 2.6.x 64-Bit, Linux 64-Bit, Other 64-Bit, Microsoft Windows Server 2008 R2, VMware ESXi, Microsoft Windows 7, CentOS 32-bit, CentOS 64-bit, Oracle Linux 32-bit, Oracle Linux 64-bit, eComStation 32-bitx, Microsoft Windows Server 2011, Microsoft Windows Server 2012, Microsoft Windows 8, Microsoft Windows 8 64-bit, Microsoft Windows Server 2012 R2, Microsoft Windows Server 2016, Microsoft Windows 8.1, Microsoft Windows 8.1 64-bit, Microsoft Windows 10, Microsoft Windows 10 64-bit</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Text -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Text">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For example: 
+
+Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next paragraph) shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#UserTracking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#UserTracking">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User-assigned and writeable asset-tracking identifier for the PhysicalElement.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Vendor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Vendor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the FRU&apos;s supplier.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#VendorEquipmentType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#VendorEquipmentType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vendor-specific hardware type for the PhysicalElement. It describes the specific equipment type for the element, as defined by the vendor or manufacturer.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Version">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string that indicates the version of the PhysicalElement</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#VersionString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#VersionString">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A string representing the complete software version information - for example, &apos;12.1(3)T&apos;. This string and the numeric major/minor/revision/build properties are complementary. Since vastly different representations and semantics exist for versions, it is not assumed that one representation is sufficient to permit a client to perform computations (i.e., the values are numeric) and a user to recognize the software&apos;s version (i.e., the values are understandable and readable). Hence, both numeric and string representations of version are provided.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#WarrantyDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#WarrantyDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If this Product is under warranty, the duration of the warranty in days.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#WarrantyStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#WarrantyStartDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If this Product is under warranty, the start date of the warranty.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#WebPages -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#WebPages">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other web pages for this license.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classify the software.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">125.91659479562537</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.88204538672695</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The FRU class is a vendor-defined collection of Products and/or PhysicalElements that is associated with a Product for the purpose of supporting, maintaining or upgrading that Product at the customer&apos;s location. FRU is an acronym for &apos;field replaceable unit&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates the current health of the element. This attribute expresses the health of this element but not necessarily that of its subcomponents. 
+&quot;Non-recoverable Error&quot; - The element has completely failed, and recovery is not possible. All functionality provided by this element has been lost. 
+&quot;Critical Failure&quot;  - The element is non-functional and recovery might not be possible. 
+&quot;Major Failure&quot; - The element is failing. It is possible that some or all of the functionality of this component is degraded or not working. 
+&quot;Minor Failure&quot;  - All functionality is available but some might be degraded. 
+&quot;Degraded/Warning&quot;  - The element is in working order and all functionality is provided. However, the element is not working to the best of its abilities. For example, the element might not be operating at optimal performance or it might be reporting recoverable errors. 
+&quot;OK&quot;  - The element is fully functional and is operating within normal operational parameters and without error. &quot;Unknown&quot;.
+
+Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical failure, Non-recoverable error</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">215.7828295953237</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">76.50558656596547</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Location class specifies the position and address of a PhysicalElement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement">
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">185.9162982628709</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">295.0637332535682</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedElement is an abstract class that provides a common superclass.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">360.1391270866579</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">400.1452533215478</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any distinguishable component of a System is a candidate for inclusion in this class. Examples of system components include: - software components such as application servers, databases, and applications - operating system components such as files, processes, and threads - device components such as disk drives, controllers, processors, and printers - physical components such as chips and cards.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OperatingStatus provides a current status value for the operational condition of the element. It can also provide the transitional states when an element is transitioning from one state to another. 
+
+&quot;Unknown&quot; indicates the implementation is in general capable of returning this property, but is unable to do so at this time. 
+&quot;None&quot; indicates that the implementation (provider) is capable of returning a value for this property, but not ever for this particular piece of hardware/software or the property is intentionally not used because it adds no meaningful information (as in the case of a property that is intended to add additional info to another property). 
+&quot;Servicing&quot; describes an element being configured, maintained, cleaned, or otherwise administered. 
+&quot;Dormant&quot; indicates that the element is inactive or quiesced.
+&quot;Migrating&quot; element is being moved between host elements. 
+&quot;In Test&quot; element is performing test functions. 
+&quot;Transitioning&quot; describes an element that is between states, that is, it is not fully available in either its previous state or its next state. This value should be used if other values indicating a transition to a specific state are not applicable. 
+&quot;In Service&quot; describes an element that is in service and operational.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">509.96779175836207</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">129.97908426746073</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instances of this class can be defined as an object that can be seen or touched. All Processes, Files, and LogicalDevices are considered not to be Physical Elements. For example, it is not possible to touch the functionality of a &apos;modem.&apos; You can touch only the card or package that implements the modem. The same card could also implement a LAN adapter. PhysicalElements are tangible ManagedSystemElements that have a physical manifestation of some sort. Note that the properties of PhysicalElement describe a hardware entity. Possible replacement (FRU) information is defined by FRU association. This definition allows a client to determine what hardware can be replaced (FRUed) and what &apos;spare&apos; parts might be required by a customer or engineer doing the replacement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">125.6208428994094</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">37.8752209545502</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product is a concrete class that aggregates PhysicalElements, SoftwareIdentity and/or other Products, and is acquired as a unit. Acquisition implies an agreement between supplier and consumer which may have implications to Product licensing, support and warranty.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">85.16352403219078</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">207.63296031451327</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Software Package Data Exchange® (SPDX®) specification is a standard format for communicating the components, licenses and copyrights associated with a software package. The need to identify the license for open source software is critical for both reporting purposes and license compliance.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SWID">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">119.58813663955416</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">55.419672363863306</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">According to ISO/IEC 19770-2:2009  the SWID tag is an XML file containing authoritative identification and management information about a software product. Accurate identification of software allows organizations to support internal requirements and comply with regulatory requirements.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+        <opla-sd:entityPosition>
+            <rdf:Description>
+                <opla-sd:entityPositionX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.72389493352092</opla-sd:entityPositionX>
+                <opla-sd:entityPositionY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">144.5071153139528</opla-sd:entityPositionY>
+                <rdfs:comment xml:lang="en">This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view.</rdfs:comment>
+            </rdf:Description>
+        </opla-sd:entityPosition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SoftwareIdentity provides descriptive information about a software component for asset tracking and/or installation dependency management</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Application_Software -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Application_Software">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Configuration_Software -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Configuration_Software">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Critical_failure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Critical_failure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Diagnostic_Software -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Diagnostic_Software">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Dormant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Dormant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Driver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Driver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Firmware -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Firmware">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#In_Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#In_Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#In_Test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#In_Test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Instrumentation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Instrumentation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Major_failure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Major_failure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Middleware -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Middleware">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Migrating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Migrating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Minor_failure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Minor_failure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Non-recoverable_error -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Non-recoverable_error">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#None -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#None">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Operating_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Operating_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Other -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Other">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Servicing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Servicing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Software_Bundle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Software_Bundle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Transitioning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Transitioning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Unknown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Unknown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#BIOS/FCode -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#BIOS/FCode">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Degraded/Warning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Degraded/Warning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Support/Service_Pack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Support/Service_Pack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPDX SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU and Product SubClassOf ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer Domain SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer Domain SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPDX SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU and Product SubClassOf ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManagedSystemElement DisjointWith Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Domain Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location DisjointWith ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasName Domain ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product SubClassOf ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasFRU Range Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range SPDX</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range PhysicalElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range ManagedSystemElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasProduct Range ManagedElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasLocation Range SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRU DisjointWith SPDX</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPDX EquivalentTo SWID</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caption Domain FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family Domain FRU</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caption Domain Location</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OperatingStatus Domain PhysicalElement</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OperatingStatus DisjointWith SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classifications DisjointWith OperatingStatus</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown Type Classifications</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classifications SubClassOf Product</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WarrantyDuration Domain SPDX</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product DisjointWith SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ontodebug:type>
+    </rdf:Description>
+    <rdf:Description>
+        <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WarrantyDuration Domain SoftwareIdentity</ontodebug:axiom>
+        <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareIdentity"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
