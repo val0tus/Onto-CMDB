@@ -576,9 +576,6 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrimaryStatus provides a high level status value, intended to align with Red-Yellow-Green type representation of status. It should be used in conjunction with DetailedStatus to provide high level and detailed health status of the ManagedElement and its subcomponents. PrimaryStatus consists of one of the following values: Unknown, OK, Degraded or Error. &quot;Unknown&quot; indicates the implementation is in general capable of returning this property, but is unable to do so at this time. &quot;OK&quot; indicates the ManagedElement is functioning normally. &quot;Degraded&quot; indicates the ManagedElement is functioning below normal. &quot;Error&quot; indicates the ManagedElement is in an Error condition.
-
-Values:Unknown, OK, Degraded, Error</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -991,6 +988,14 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
     
 
 
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product">
@@ -1114,6 +1119,14 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
     
 
 
+    <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Error -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Error">
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Firmware -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Firmware">
@@ -1198,6 +1211,7 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OK">
         <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus"/>
     </owl:NamedIndividual>
     
 
@@ -1246,6 +1260,7 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Unknown">
         <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus"/>
     </owl:NamedIndividual>
     
 
@@ -1262,6 +1277,7 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Degraded/Warning">
         <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus"/>
     </owl:NamedIndividual>
     
 
@@ -1742,6 +1758,22 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
     <rdf:Description>
         <ontodebug:axiom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WarrantyDuration Domain SoftwareIdentity</ontodebug:axiom>
         <ontodebug:type rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ontodebug:type>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrimaryStatus provides a high level status value, intended to align with Red-Yellow-Green type representation of status. It should be used in conjunction with DetailedStatus to provide high level and detailed health status of the ManagedElement and its subcomponents. PrimaryStatus consists of one of the following values: Unknown, OK, Degraded or Error. &quot;Unknown&quot; indicates the implementation is in general capable of returning this property, but is unable to do so at this time. &quot;OK&quot; indicates the ManagedElement is functioning normally. &quot;Degraded&quot; indicates the ManagedElement is functioning below normal. &quot;Error&quot; indicates the ManagedElement is in an Error condition.
+
+Values:Unknown, OK, Degraded, Error</rdfs:comment>
     </rdf:Description>
     
 
