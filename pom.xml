@@ -5,7 +5,7 @@
   <artifactId>rdf4j</artifactId>
   <name>RDF4J</name>
   <url>http://maven.apache.org</url>
-  <version>1</version>
+  <version>0.0.1</version>
   <dependencies>
   	<dependency>
   		<groupId>org.eclipse.rdf4j</groupId>
@@ -40,3 +40,4 @@
     </plugins>
 </build>
 </project>
+
