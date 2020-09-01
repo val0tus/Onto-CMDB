@@ -16,16 +16,21 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
-import org.eclipse.rdf4j.sail.memory.MemoryStore;
+import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.eclipse.rdf4j.sail.inferencer.fc.SchemaCachingRDFSInferencer;
+import org.eclipse.rdf4j.sail.memory.MemoryStore; //for testing
 
 public class HelloRDF4J {
 
 	public static void main(String[] args) {
-		Repository rep = new SailRepository(new MemoryStore());
+		File dataDir = new File("C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/datadir");
+		String indexes = "spoc,posc,cosp";
+		Repository rep = new SailRepository(new NativeStore(dataDir, indexes));
+		
 		rep.init();
 		String namespace = "http://example.org/"; 
 		ValueFactory f = rep.getValueFactory();
@@ -43,6 +48,7 @@ public class HelloRDF4J {
 			model.setNamespace("ex", namespace);
 			Rio.write(model, System.out, RDFFormat.TURTLE);
 		}
+		
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 
 		OWLOntology ontology = null;
@@ -53,9 +59,10 @@ public class HelloRDF4J {
 			e.printStackTrace();
 		}
 		 
-		System.out.println("Ontology : " + ontology.getOntologyID()); 
+		System.out.println("Ontology : " + ontology.getOntologyID());
 		System.out.println("Format      : " + manager.getOntologyFormat(ontology)); 
-
-	}
+		
+		}
+	
 
 }
