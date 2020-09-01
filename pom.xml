@@ -24,6 +24,11 @@
    		<type>pom</type>
    		<version>3.15.0</version>
 	</dependency>
+	<dependency>
+		<groupId>net.sourceforge.owlapi</groupId>
+		<artifactId>owlapi-distribution</artifactId>
+		<version>5.0.4</version>
+		</dependency>
   </dependencies>
   <build>
     <plugins>
