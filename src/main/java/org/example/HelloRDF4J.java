@@ -1,5 +1,7 @@
 package org.example;
 
+import java.io.File;
+
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Statement;
@@ -15,6 +17,10 @@ import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.sail.memory.MemoryStore;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 public class HelloRDF4J {
 
@@ -37,6 +43,18 @@ public class HelloRDF4J {
 			model.setNamespace("ex", namespace);
 			Rio.write(model, System.out, RDFFormat.TURTLE);
 		}
+		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+
+		OWLOntology ontology = null;
+		try {
+			ontology = manager.loadOntologyFromOntologyDocument(new File("C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/Onto-CMDB.owl"));
+		} catch (OWLOntologyCreationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		System.out.println("Ontology : " + ontology.getOntologyID()); 
+		System.out.println("Format      : " + manager.getOntologyFormat(ontology)); 
 
 	}
 
