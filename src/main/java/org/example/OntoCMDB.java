@@ -31,6 +31,12 @@ import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.UnsupportedRDFormatException;
 import org.eclipse.rdf4j.sail.memory.MemoryStore;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
+import org.eclipse.rdf4j.sparqlbuilder.core.Prefix;
+import org.eclipse.rdf4j.sparqlbuilder.core.SparqlBuilder;
+import org.eclipse.rdf4j.sparqlbuilder.core.Variable;
+import org.eclipse.rdf4j.sparqlbuilder.core.query.ConstructQuery;
+import org.eclipse.rdf4j.sparqlbuilder.core.query.Queries;
+import org.eclipse.rdf4j.sparqlbuilder.core.query.SelectQuery;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
 import org.eclipse.rdf4j.query.BindingSet;
@@ -54,19 +60,21 @@ public class OntoCMDB {
 		String namespace = "http://example.org/"; 
 		ValueFactory f = rep.getValueFactory();
 		IRI john = f.createIRI(namespace, "john");
+		
 		try (RepositoryConnection conn = rep.getConnection()) {
 			conn.add(john, RDF.TYPE, FOAF.PERSON); 
 			conn.add(john, RDFS.LABEL, f.createLiteral("John"));
 			
 			RepositoryResult<Statement> statements = conn.getStatements(null, null, null);
 			Model modelx = QueryResults.asModel(statements);
-			Rio.write(modelx, System.out, RDFFormat.TURTLE);
 			modelx.setNamespace(RDF.NS);
 			modelx.setNamespace(RDFS.NS);
 			modelx.setNamespace(FOAF.NS); 
 			modelx.setNamespace("ex", namespace);
 			Rio.write(modelx, System.out, RDFFormat.TURTLE);
-			
+
+	
+	
 		}
 		/*
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
@@ -83,6 +91,8 @@ public class OntoCMDB {
 		System.out.println("Format      : " + manager.getOntologyFormat(ontology)); 
 		
 		*/
+		
+		/*
 		String filename = "C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/Onto-CMDB.ttl";
 		
 		InputStream input = null;
@@ -120,7 +130,7 @@ public class OntoCMDB {
 					Statement st = result.next();
 					System.out.println("db contains: " + st);
 				}
-				/*
+				
 				String queryString = "SELECT ?x ?y WHERE { ?x ?p ?y } ";	
 				TupleQuery tupleQuery = conn.prepareTupleQuery(queryString);
 				   try (TupleQueryResult res = tupleQuery.evaluate()) {
@@ -131,7 +141,7 @@ public class OntoCMDB {
 					         System.out.println("db: " + valueOfX + valueOfY);
 					      }
 					   }
-				*/
+				
 			}
 			
 	
@@ -147,6 +157,8 @@ public class OntoCMDB {
 			db.shutDown();
 			
 		}
+		
+		*/
 
 		/* Using Repositories.consume(), we do not explicitly begin or 
 		 * commit a transaction. We don’t even open and close a connection explicitly –
@@ -158,16 +170,19 @@ public class OntoCMDB {
 		  //conn.add(bob, RDF.TYPE, FOAF.PERSON);
 		  conn.add(john, RDFS.LABEL, f.createLiteral("Bob"));
 		  conn.add(john, RDFS.LABEL, f.createLiteral("Alice"));
+		  conn.add(john, RDFS.LABEL, f.createLiteral("Ted"));
+	
 		
 		  /*RepositoryResult<Statement> statements = conn.getStatements(null, null, null);
 		  Model model2 = QueryResults.asModel(statements);*/
 		  
-		 
+		  
 		  	
 			
 		});
+		
 		rep.shutDown();
-		db.shutDown();
+		//db.shutDown();
 		}
 	
 	
