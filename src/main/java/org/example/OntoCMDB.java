@@ -186,7 +186,10 @@ public class OntoCMDB {
 			   }
 			}
 		*/
-		
+		/* As you can see, using Repositories.consume(), we do not explicitly begin or 
+		 * commit a transaction. We don’t even open and close a connection explicitly –
+		 *  this is all handled internally. The method also ensures that the transaction is rolled back 
+		 *  if an exception occurs */
 		ValueFactory f1 = rep.getValueFactory();
 		IRI bob = f1.createIRI("urn:bob");
 		Repositories.consume(rep, conn -> {
@@ -196,6 +199,8 @@ public class OntoCMDB {
 			Model model2 = QueryResults.asModel(statements);
 			Rio.write(model2, System.out, RDFFormat.TURTLE);
 		  
+			
+			
 		});
 
 		}
