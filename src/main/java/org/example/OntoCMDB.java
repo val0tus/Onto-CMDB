@@ -59,14 +59,14 @@ public class OntoCMDB {
 			conn.add(john, RDFS.LABEL, f.createLiteral("John"));
 			
 			RepositoryResult<Statement> statements = conn.getStatements(null, null, null);
-			Model model = QueryResults.asModel(statements);
-			Rio.write(model, System.out, RDFFormat.TURTLE);
-			model.setNamespace(RDF.NS);
-			model.setNamespace(RDFS.NS);
-			model.setNamespace(FOAF.NS); 
-			model.setNamespace("ex", namespace);
-			Rio.write(model, System.out, RDFFormat.TURTLE);
-			//rep.shutDown();
+			Model modelx = QueryResults.asModel(statements);
+			Rio.write(modelx, System.out, RDFFormat.TURTLE);
+			modelx.setNamespace(RDF.NS);
+			modelx.setNamespace(RDFS.NS);
+			modelx.setNamespace(FOAF.NS); 
+			modelx.setNamespace("ex", namespace);
+			Rio.write(modelx, System.out, RDFFormat.TURTLE);
+			
 		}
 		/*
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
@@ -147,64 +147,29 @@ public class OntoCMDB {
 			db.shutDown();
 			
 		}
-		/*
-		File inputFile1 = new File("/path/to/example1.rdf");
-		String baseURI1 = "http://example.org/example1/";
-		File inputFile2 = new File("/path/to/example2.rdf");
-		String baseURI2 = "http://example.org/example2/";
-		
-		try (RepositoryConnection con = db.getConnection()) {
-			   // start a transaction
-			   con.begin();
-			   try {
-			      // Add the first file
-			      try {
-					con.add(inputFile1, baseURI1, RDFFormat.RDFXML);
-				} catch (RDFParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			      // Add the second file
-			      try {
-					con.add(inputFile2, baseURI2, RDFFormat.RDFXML);
-				} catch (RDFParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			      // If everything went as planned, we can commit the result
-			      con.commit();
-			   }
-			   catch (RepositoryException e) {
-			      // Something went wrong during the transaction, so we roll it back
-			      con.rollback();
-			   }
-			}
-		*/
-		/* As you can see, using Repositories.consume(), we do not explicitly begin or 
+
+		/* Using Repositories.consume(), we do not explicitly begin or 
 		 * commit a transaction. We don’t even open and close a connection explicitly –
 		 *  this is all handled internally. The method also ensures that the transaction is rolled back 
 		 *  if an exception occurs */
-		ValueFactory f1 = rep.getValueFactory();
-		IRI bob = f1.createIRI("urn:bob");
+		//ValueFactory f = rep.getValueFactory();
+		//IRI bob = f1.createIRI("http://example.org/bob");
 		Repositories.consume(rep, conn -> {
-		  conn.add(bob, RDF.TYPE, FOAF.PERSON);
-		  conn.add(bob, RDFS.LABEL, f.createLiteral("Bob"));
-		  RepositoryResult<Statement> statements = conn.getStatements(null, null, null);
-			Model model2 = QueryResults.asModel(statements);
-			Rio.write(model2, System.out, RDFFormat.TURTLE);
+		  //conn.add(bob, RDF.TYPE, FOAF.PERSON);
+		  conn.add(john, RDFS.LABEL, f.createLiteral("Bob"));
+		  conn.add(john, RDFS.LABEL, f.createLiteral("Alice"));
+		
+		  /*RepositoryResult<Statement> statements = conn.getStatements(null, null, null);
+		  Model model2 = QueryResults.asModel(statements);*/
 		  
-			
+		 
+		  	
 			
 		});
-
+		rep.shutDown();
+		db.shutDown();
 		}
 	
-		
+	
 
 }
