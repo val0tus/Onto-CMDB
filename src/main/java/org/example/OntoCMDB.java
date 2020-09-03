@@ -31,7 +31,7 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 
-public class HelloRDF4J {
+public class OntoCMDB {
 
 	public static void main(String[] args) {
 		File dataDir = new File("C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/datadir");
