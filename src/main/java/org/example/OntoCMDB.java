@@ -120,7 +120,7 @@ public class OntoCMDB {
 					Statement st = result.next();
 					System.out.println("db contains: " + st);
 				}
-				
+				/*
 				String queryString = "SELECT ?x ?y WHERE { ?x ?p ?y } ";	
 				TupleQuery tupleQuery = conn.prepareTupleQuery(queryString);
 				   try (TupleQueryResult res = tupleQuery.evaluate()) {
@@ -131,7 +131,7 @@ public class OntoCMDB {
 					         System.out.println("db: " + valueOfX + valueOfY);
 					      }
 					   }
-				
+				*/
 			}
 			
 	
@@ -197,7 +197,7 @@ public class OntoCMDB {
 			Rio.write(model2, System.out, RDFFormat.TURTLE);
 		  
 		});
-		
+
 		}
 	
 		
