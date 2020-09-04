@@ -1,5 +1,4 @@
 package org.example;
-//package org.example;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,9 +19,6 @@ import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
 import org.eclipse.rdf4j.query.BindingSet;
-
-
-
 
 public class OntoCMDB {
 
