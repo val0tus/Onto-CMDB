@@ -34,13 +34,13 @@ class OntoCMDBTest {
 		         while (res.hasNext()) {
 					BindingSet solution = res.next();
 						System.out.println("?s = " + solution.getValue("s"));
-						System.out.println("?y = " + solution.getValue("y"));
 						count++;
 		         }
 		         assertEquals(9, count);
-			}
+			} finally {
 			conn.close();
 			db.shutDown();
+			}
 		}
 		
 	}
@@ -60,14 +60,13 @@ class OntoCMDBTest {
 		        while (res.hasNext()) {
 		        	 BindingSet solution = res.next();
 		        	 System.out.println("?s = " + solution.getValue("s"));
-		        	 System.out.println("?y = " + solution.getValue("y"));
 		        	 count++;
-		        	 System.out.println(count); 
-				}
+		    }
 		         assertEquals(2, count);
-			}
+			} finally {
 			conn.close();
 			db.shutDown();
+			}
 		}
 		
 	}
