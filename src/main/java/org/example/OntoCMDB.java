@@ -68,7 +68,7 @@ public class OntoCMDB {
 			}
 		
 		finally {
-			// shut down the database properly.
+			// shut down the database
 			db.shutDown();
 			
 		}
