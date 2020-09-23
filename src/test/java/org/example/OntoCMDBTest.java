@@ -58,16 +58,12 @@ class OntoCMDBTest {
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
 				int count = 0;
 		         while (res.hasNext()) {
-									BindingSet solution = res.next();
-									System.out.println("?s = " + solution.getValue("s"));
-									System.out.println("?y = " + solution.getValue("y"));
-									  
-									//res.next();
-								      count++;
-								      System.out.println(count);
+		        	 BindingSet solution = res.next();
+		        	 System.out.println("?s = " + solution.getValue("s"));
+		        	 System.out.println("?y = " + solution.getValue("y"));
+		        	 count++;
+		        	 System.out.println(count);
 				}
-		         
-			      
 			}
 			conn.close();
 			db.shutDown();
