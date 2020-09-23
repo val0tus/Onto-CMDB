@@ -34,13 +34,15 @@ import org.eclipse.rdf4j.query.QueryLanguage;
 public class OntoCMDB {
 
 	public static void main(String[] args) {
+		
+		// Define the constants
 		File dataDir = new File("C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/datadir");
+		String filename = "C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/Onto-CMDB.ttl";
+		
+		// Define RDF4J NativeStore database
 		String indexes = "spoc,posc,cosp";
 		Repository db = new SailRepository(new NativeStore(dataDir, indexes));
 		
-
-		
-		String filename = "C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/Onto-CMDB.ttl";
 		
 		InputStream input = null;
 		try {
@@ -64,81 +66,28 @@ public class OntoCMDB {
 			e.printStackTrace();
 		}
 		
+		// Initialize the database
+		
 		db.init();
 		
 		try (RepositoryConnection conn = db.getConnection()) {
-			// add the model
+			
+			// Add the model to database
 			conn.add(model);
-
-			String queryString = "SELECT ?subject ?object WHERE {?subject rdfs:subClassOf ?object } ";	
-			TupleQuery tupleQuery = conn.prepareTupleQuery(queryString);
-				   try (TupleQueryResult res = tupleQuery.evaluate()) {
-					      while (res.hasNext()) {  // iterate over the result
-					         BindingSet bindingSet = res.next();
-					         Value valueOfX = bindingSet.getValue("subject");
-					         Value valueOfY = bindingSet.getValue("object");
-					         System.out.println("db: " + valueOfX +" "+ valueOfY);
-					         
-					      }
-					      
-					   }
-			String CheckSparql = "SELECT (count(?s) as ?scount) where { ?s ?p ?o . }";
-			//TupleQuery tupleQuery2 = conn.prepareTupleQuery(CheckSparql);
-
-			TupleQuery PreparedSparql = conn.prepareTupleQuery(QueryLanguage.SPARQL, CheckSparql);
-			TupleQueryResult Result = PreparedSparql.evaluate();
-			BindingSet ResBindSet = Result.next();
-			int TripleCount = Literals.getIntValue(ResBindSet.getValue("Firmware"), 2);
-		
-			System.out.println(TripleCount);
-			
-			ValueFactory vf = SimpleValueFactory.getInstance();
-			
-			ModelBuilder builder = new ModelBuilder();
-			Model model1 = builder
-			                  .setNamespace("ex", "http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB")
-					  .subject("ex:ManagedElement")
-					       //.add(RDF.TYPE, "ex:Name")
-					       .add(RDF.VALUE, "Cisco")
-					  .build();
-			conn.add(model1);
-			
-			Model model2 = builder
-					     .setNamespace("ex", "http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB/SoftwareIdentity")
-					     .subject("ex:linux")
-					 	// In English, this painting is called "The Potato Eaters"
-					 	.add(DC.NAMESPACE, vf.createLiteral("The Potato Eaters"))
-					 	// In Dutch, it's called "De Aardappeleters"
-					 	//.add(DC.TITLE,  vf.createLiteral("De Aardappeleters", "nl"))
-					     .build();
-			conn.add(model2);
-			
-			try (RepositoryResult<Statement> result = conn.getStatements(null, null, null);) {
-					for (Statement st: result) {
-						System.out.println("db contains: " + st);
-						Rio.write(model2, System.out, RDFFormat.TURTLE);
-						}
-					}
-	
-	
 		
 		}
-		
-		
+			
 		catch (RDF4JException e) {
 			   // handle exception. This catch-clause is
 			   // optional since RDF4JException is an unchecked exception
 			}
 		
-		
 		finally {
-			// before our program exits, make sure the database is properly shut down.
+			// shut down the database properly.
 			db.shutDown();
 			
 		}
 		
-		}
+	}
 	
-	
-
 }
