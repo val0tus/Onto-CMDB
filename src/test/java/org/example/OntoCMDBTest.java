@@ -26,15 +26,18 @@ class OntoCMDBTest {
 		try (RepositoryConnection conn = db.getConnection()) {
 
 			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
-		            +  "SELECT *  WHERE {?s ?y :MEM1800-64CF} \n";	
+		            +  "SELECT DISTINCT ?s  WHERE {?s a owl:Class} \n";	
 			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);
 	
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
+				int count = 0;
 		         while (res.hasNext()) {
 					BindingSet solution = res.next();
 						System.out.println("?s = " + solution.getValue("s"));
 						System.out.println("?y = " + solution.getValue("y"));
+						count++;
 		         }
+		         assertEquals(9, count);
 			}
 			conn.close();
 			db.shutDown();
@@ -59,8 +62,7 @@ class OntoCMDBTest {
 		        	 System.out.println("?s = " + solution.getValue("s"));
 		        	 System.out.println("?y = " + solution.getValue("y"));
 		        	 count++;
-		        	 System.out.println(count);
-		        	 
+		        	 System.out.println(count); 
 				}
 		         assertEquals(2, count);
 			}
