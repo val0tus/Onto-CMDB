@@ -1,5 +1,7 @@
 package org.example;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.File;
 import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.QueryLanguage;
@@ -9,7 +11,6 @@ import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
-import org.junit.After;
 import org.junit.jupiter.api.Test;
 
 class OntoCMDBTest {
@@ -18,20 +19,15 @@ class OntoCMDBTest {
 	String index = "spoc,posc,cosp";
 	Repository db = new SailRepository(new NativeStore(dataDir, index));
 	
-    @After
-    public void after() {
-    			
-    	db.shutDown();
-    }
-    
+   
 	@Test
-	public void testClasses() throws Exception {
+	public void testCountofClasses() throws Exception {      
 
 		try (RepositoryConnection conn = db.getConnection()) {
 
-			String queryString = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
+			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
 		            +  "SELECT *  WHERE {?s ?y :MEM1800-64CF} \n";	
-			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,queryString);
+			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);
 	
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
 		         while (res.hasNext()) {
@@ -43,6 +39,7 @@ class OntoCMDBTest {
 			conn.close();
 			db.shutDown();
 		}
+		
 	}
 	
 	@Test
@@ -50,23 +47,30 @@ class OntoCMDBTest {
 
 		try (RepositoryConnection conn = db.getConnection()) {
 
-			String queryString = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
+			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
 		            +  "SELECT *  WHERE {?s ?y :MEM1800-64CF} \n";	
-			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,queryString);
+			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);
 			 
 	
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
 				int count = 0;
-		         while (res.hasNext()) {
+		        while (res.hasNext()) {
 		        	 BindingSet solution = res.next();
 		        	 System.out.println("?s = " + solution.getValue("s"));
 		        	 System.out.println("?y = " + solution.getValue("y"));
 		        	 count++;
 		        	 System.out.println(count);
+		        	 
 				}
+		         assertEquals(2, count);
 			}
 			conn.close();
 			db.shutDown();
 		}
+		
 	}
+	
+	
+	
+	
 }
