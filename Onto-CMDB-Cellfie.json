@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"Product","startColumn":"A","endColumn":"D","startRow":"2","endRow":"+","comment":"","rule":"Individual: @C*\nTypes: Product\nFacts: SKU @D* (xsd:string)\nFacts: WarrantyDuration @B* (xsd:integer)\nFacts: WarrantyStartDate @A* (xsd:dateTime)","active":true}]}
