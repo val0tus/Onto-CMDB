@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Onto-CMDB-Cellfie.json</name>
+			<type>1</type>
+			<location>C:/Users/Default User.Lenovo/Documents/yamk/YAMK/THESIS/Onto-CMDB-Cellfie.json</location>
+		</link>
+	</linkedResources>
 </projectDescription>

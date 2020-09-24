@@ -38,6 +38,8 @@ public class OntoCMDB {
 		}
 		
 		Model model = null;
+		
+		// Parse turtle file to model
 		try {
 			model = Rio.parse(input, "", RDFFormat.TURTLE);
 		} catch (RDFParseException e) {
