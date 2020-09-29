@@ -109,12 +109,12 @@ class OntoCMDBTest {
 	}
 	
 	@Test
-	public void testIfhasSWID() throws Exception {
+	public void testIfhasSWIDandProductTitle() throws Exception {
 
 		try (RepositoryConnection conn = db.getConnection()) {
 
 			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
-		            +  "ASK { :CISCO_IOS_12_4 :hasSWID :Cisco_IOS } \n";	
+		            +  "ASK {  :CISCO_IOS_12_4 :hasSWID :Cisco_IOS .  :Cisco_IOS :ProductTitle \"Cisco IOS\"^^xsd:string } \n";	
 			BooleanQuery booleanQuery = conn.prepareBooleanQuery(QueryLanguage.SPARQL,query);
 			
 			assert(booleanQuery.evaluate());
@@ -130,7 +130,7 @@ class OntoCMDBTest {
 		try (RepositoryConnection conn = db.getConnection()) {
 
 			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
-		            +  "ASK { :CISCO1841_002 :hasPhysicalElement :Cisco_1841_chassis } \n";	
+		            +  "ASK { :CISCO1841_002 :hasPhysicalElement :Cisco_1841_chassis . } \n";	
 			BooleanQuery booleanQuery = conn.prepareBooleanQuery(QueryLanguage.SPARQL,query);
 			
 			assert(booleanQuery.evaluate());
