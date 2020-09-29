@@ -42,16 +42,10 @@ public class OntoCMDB {
 		// Parse turtle file to model
 		try {
 			model = Rio.parse(input, "", RDFFormat.TURTLE);
-		} catch (RDFParseException e) {
-			// TODO Auto-generated catch block
+		} catch (RDFParseException | UnsupportedRDFormatException | IOException e) {
+			// Auto-generated catch block
 			e.printStackTrace();
-		} catch (UnsupportedRDFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 		
 		// Initialize the database
 		

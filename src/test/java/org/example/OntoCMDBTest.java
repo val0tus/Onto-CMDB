@@ -1,18 +1,11 @@
 package org.example;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.io.File;
 
-import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.BooleanQuery;
-import org.eclipse.rdf4j.query.GraphQuery;
-import org.eclipse.rdf4j.query.GraphQueryResult;
 import org.eclipse.rdf4j.query.QueryLanguage;
-import org.eclipse.rdf4j.query.QueryResults;
 import org.eclipse.rdf4j.query.TupleQuery;
 import org.eclipse.rdf4j.query.TupleQueryResult;
 import org.eclipse.rdf4j.repository.Repository;
@@ -27,7 +20,6 @@ class OntoCMDBTest {
 	String index = "spoc,posc,cosp";
 	Repository db = new SailRepository(new NativeStore(dataDir, index));
 	
-   
 	@Test
 	public void testCountofClasses() throws Exception {      
 
@@ -50,7 +42,6 @@ class OntoCMDBTest {
 			db.shutDown();
 			}
 		}
-		
 	}
 	
 	@Test
@@ -62,7 +53,6 @@ class OntoCMDBTest {
 		            +  "SELECT *  WHERE {?s ?y :MEM1800-64CF} \n";	
 			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);
 			 
-	
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
 				int count = 0;
 		        while (res.hasNext()) {
@@ -76,8 +66,8 @@ class OntoCMDBTest {
 			db.shutDown();
 			}
 		}
-		
 	}
+	
 	@Test
 	public void testCountofProduct() throws Exception {
 
@@ -86,22 +76,20 @@ class OntoCMDBTest {
 			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
 		            +  "SELECT ?s  WHERE {?s  rdf:type :Product } \n";	
 			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);
-			 
-	
+ 
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
 				int count = 0;
 		        while (res.hasNext()) {
 		        	 BindingSet solution = res.next();
 		        	 System.out.println("?s = " + solution.getValue("s"));
 		        	 count++;
-		    }
+		        }
 		         assertEquals(3, count);
 			} finally {
 			conn.close();
 			db.shutDown();
 			}
 		}
-		
 	}
 	
 	@Test
@@ -117,9 +105,38 @@ class OntoCMDBTest {
 
 			conn.close();
 			db.shutDown();
-			
 		}
-		
 	}
 	
+	@Test
+	public void testIfhasSWID() throws Exception {
+
+		try (RepositoryConnection conn = db.getConnection()) {
+
+			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
+		            +  "ASK { :CISCO_IOS_12_4 :hasSWID :Cisco_IOS } \n";	
+			BooleanQuery booleanQuery = conn.prepareBooleanQuery(QueryLanguage.SPARQL,query);
+			
+			assert(booleanQuery.evaluate());
+
+			conn.close();
+			db.shutDown();
+		}
+	}
+	
+	@Test
+	public void testIfhasPhysicalElement() throws Exception {
+
+		try (RepositoryConnection conn = db.getConnection()) {
+
+			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
+		            +  "ASK { :CISCO1841_002 :hasPhysicalElement :Cisco_1841_chassis } \n";	
+			BooleanQuery booleanQuery = conn.prepareBooleanQuery(QueryLanguage.SPARQL,query);
+			
+			assert(booleanQuery.evaluate());
+
+			conn.close();
+			db.shutDown();
+		}
+	}
 }
