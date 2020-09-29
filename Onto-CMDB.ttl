@@ -9,64 +9,25 @@
 @base <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB> .
 
 <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB> rdf:type owl:Ontology ;
-                                                                      ontodebug:testCase [ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+                                                                      ontodebug:testCase [ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
-                                                                                           ontodebug:type "false"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
-                                                                                           ontodebug:type "false"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
-                                                                                           ontodebug:type "false"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
-                                                                                           ontodebug:type "false"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-                                                                                           ontodebug:type "false"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
-                                                                                           ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "CISCO_CATALYST_3750 Caption \"Cisco Catalyst 3750\"^^string"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
@@ -75,43 +36,46 @@
                                                                                          [ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         [ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
+                                                                                         [ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
                                                                                          [ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "Name Domain ManagedElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] .
 
@@ -152,14 +116,57 @@ opla-sd:entityPositionY rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasFRU
 :hasFRU rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf owl:topObjectProperty ;
-        rdfs:domain :PhysicalElement ;
-        rdfs:range :FRU .
+        rdfs:domain :ManagedElement ;
+        rdfs:range :FRU ;
+        owl:propertyDisjointWith :hasLocation ,
+                                 :hasManagedSystemElement ,
+                                 :hasProduct ,
+                                 :hasSoftwareIdentity .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasLocation
 :hasLocation rdf:type owl:ObjectProperty ;
-             rdfs:domain :PhysicalElement ;
+             rdfs:domain :ManagedSystemElement ;
              rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasManagedSystemElement
+:hasManagedSystemElement rdf:type owl:ObjectProperty ;
+                         rdfs:domain :ManagedElement ;
+                         rdfs:range :ManagedSystemElement ;
+                         owl:propertyDisjointWith :hasProduct .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasPhysicalElement
+:hasPhysicalElement rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ManagedSystemElement ;
+                    rdfs:range :PhysicalElement ;
+                    owl:propertyDisjointWith :hasSoftwareIdentity .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasProduct
+:hasProduct rdf:type owl:ObjectProperty ;
+            rdfs:domain :ManagedElement ;
+            rdfs:range :Product ;
+            owl:propertyDisjointWith :hasSoftwareIdentity .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasSPDX
+:hasSPDX rdf:type owl:ObjectProperty ;
+         rdfs:domain :SoftwareIdentity ;
+         rdfs:range :SPDX .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasSWID
+:hasSWID rdf:type owl:ObjectProperty ;
+         rdfs:domain :SoftwareIdentity ;
+         rdfs:range :SWID .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#hasSoftwareIdentity
+:hasSoftwareIdentity rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ManagedSystemElement ;
+                     rdfs:range :SoftwareIdentity .
 
 
 #################################################################
@@ -212,7 +219,7 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
 :ExtendedResourceType rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:domain :SoftwareIdentity ;
-                      rdfs:range xsd:integer ;
+                      rdfs:range xsd:string ;
                       rdfs:comment "The binary format type of the installation package of the software."^^xsd:string .
 
 
@@ -356,7 +363,8 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
 :PrimaryStatus rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :ManagedSystemElement ;
-               rdfs:range rdf:PlainLiteral .
+               rdfs:range rdf:PlainLiteral ;
+               rdfs:comment "PrimaryStatus provides a high level status value, intended to align with Red-Yellow-Green type representation of status. PrimaryStatus consists of one of the following values: Unknown, OK, Degraded or Error. \"Unknown\" indicates the implementation is in general capable of returning this property, but is unable to do so at this time. \"OK\" indicates the ManagedElement is functioning normally. \"Degraded\" indicates the ManagedElement is functioning below normal. \"Error\" indicates the ManagedElement is in an Error condition."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ProductTitle
@@ -365,14 +373,6 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
               rdfs:domain :SWID ;
               rdfs:range xsd:string ;
               rdfs:comment "Identifies the application. Accurately identifies the application. See ISO/IEC 19770-2:2009 for guidance."^^xsd:string .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ProductVersion
-:ProductVersion rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain :SWID ;
-                rdfs:range xsd:string ;
-                rdfs:comment "Accurately identifies the application version. Identifies the application version using two values – numeric version and version string. See ISO/IEC 19770-2:2009 for guidance."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ReleaseDate
@@ -410,7 +410,7 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SerialNumber
 :SerialNumber rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :PhysicalElement ;
+              rdfs:domain :ManagedSystemElement ;
               rdfs:range xsd:string ;
               rdfs:comment "A manufacturer-allocated number used to identify the Physical Element."^^xsd:string .
 
@@ -429,14 +429,6 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
                  rdfs:domain :SWID ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Identifies the creator of the software.Identifies the application creator.See ISO/IEC 19770-2:2009 for guidance."^^xsd:string .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareId
-:SoftwareId rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:domain :SWID ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Identifies the specific version of a specific application. Accurately identifies the application. See ISO/IEC 19770-2:2009 for guidance."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SoftwareLicensor
@@ -551,7 +543,7 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
 :WarrantyStartDate rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain :Product ;
-                   rdfs:range xsd:string ;
+                   rdfs:range xsd:dateTime ;
                    rdfs:comment "If this Product is under warranty, the start date of the warranty."^^xsd:string .
 
 
@@ -567,12 +559,6 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Classifications
-:Classifications rdf:type owl:Class ;
-                 rdfs:subClassOf :SoftwareIdentity ;
-                 rdfs:comment "Classify the software."^^xsd:string .
-
-
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#FRU
 :FRU rdf:type owl:Class ;
      rdfs:subClassOf :ManagedElement ;
@@ -583,28 +569,9 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
      rdfs:comment "The FRU class is a vendor-defined collection of Products and/or PhysicalElements that is associated with a Product for the purpose of supporting, maintaining or upgrading that Product at the customer's location. FRU is an acronym for 'field replaceable unit'."^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HealthState
-:HealthState rdf:type owl:Class ;
-             rdfs:subClassOf :ManagedSystemElement ;
-             rdfs:comment """Indicates the current health of the element. This attribute expresses the health of this element but not necessarily that of its subcomponents. 
-\"Non-recoverable Error\" - The element has completely failed, and recovery is not possible. All functionality provided by this element has been lost. 
-\"Critical Failure\"  - The element is non-functional and recovery might not be possible. 
-\"Major Failure\" - The element is failing. It is possible that some or all of the functionality of this component is degraded or not working. 
-\"Minor Failure\"  - All functionality is available but some might be degraded. 
-\"Degraded/Warning\"  - The element is in working order and all functionality is provided. However, the element is not working to the best of its abilities. For example, the element might not be operating at optimal performance or it might be reporting recoverable errors. 
-\"OK\"  - The element is fully functional and is operating within normal operational parameters and without error. \"Unknown\".
-
-Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical failure, Non-recoverable error"""^^xsd:string .
-
-
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location
 :Location rdf:type owl:Class ;
-          rdfs:subClassOf :ManagedElement ;
-          opla-sd:entityPosition [ opla-sd:entityPositionX "215.7828295953237"^^xsd:double ;
-                                   opla-sd:entityPositionY "76.50558656596547"^^xsd:double ;
-                                   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
-                                 ] ;
-          rdfs:comment "The Location class specifies the position and address of a PhysicalElement."^^xsd:string .
+          rdfs:subClassOf :ManagedSystemElement .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement
@@ -619,26 +586,12 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedSystemElement
 :ManagedSystemElement rdf:type owl:Class ;
                       rdfs:subClassOf :ManagedElement ;
+                      owl:disjointWith :Product ;
                       opla-sd:entityPosition [ opla-sd:entityPositionX "360.1391270866579"^^xsd:double ;
                                                opla-sd:entityPositionY "400.1452533215478"^^xsd:double ;
                                                rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
                                              ] ;
                       rdfs:comment "Any distinguishable component of a System is a candidate for inclusion in this class. Examples of system components include: - software components such as application servers, databases, and applications - operating system components such as files, processes, and threads - device components such as disk drives, controllers, processors, and printers - physical components such as chips and cards."^^xsd:string .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OperatingStatus
-:OperatingStatus rdf:type owl:Class ;
-                 rdfs:subClassOf :ManagedSystemElement ;
-                 rdfs:comment """OperatingStatus provides a current status value for the operational condition of the element. It can also provide the transitional states when an element is transitioning from one state to another. 
-
-\"Unknown\" indicates the implementation is in general capable of returning this property, but is unable to do so at this time. 
-\"None\" indicates that the implementation (provider) is capable of returning a value for this property, but not ever for this particular piece of hardware/software or the property is intentionally not used because it adds no meaningful information (as in the case of a property that is intended to add additional info to another property). 
-\"Servicing\" describes an element being configured, maintained, cleaned, or otherwise administered. 
-\"Dormant\" indicates that the element is inactive or quiesced.
-\"Migrating\" element is being moved between host elements. 
-\"In Test\" element is performing test functions. 
-\"Transitioning\" describes an element that is between states, that is, it is not fully available in either its previous state or its next state. This value should be used if other values indicating a transition to a specific state are not applicable. 
-\"In Service\" describes an element that is in service and operational."""^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement
@@ -650,11 +603,6 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
                                           rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
                                         ] ;
                  rdfs:comment "Instances of this class can be defined as an object that can be seen or touched. All Processes, Files, and LogicalDevices are considered not to be Physical Elements. For example, it is not possible to touch the functionality of a 'modem.' You can touch only the card or package that implements the modem. The same card could also implement a LAN adapter. PhysicalElements are tangible ManagedSystemElements that have a physical manifestation of some sort. Note that the properties of PhysicalElement describe a hardware entity. Possible replacement (FRU) information is defined by FRU association. This definition allows a client to determine what hardware can be replaced (FRUed) and what 'spare' parts might be required by a customer or engineer doing the replacement."^^xsd:string .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus
-:PrimaryStatus rdf:type owl:Class ;
-               rdfs:subClassOf :ManagedSystemElement .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product
@@ -701,149 +649,871 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Application_Software
-:Application_Software rdf:type owl:NamedIndividual ,
-                               :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO1841_001
+:CISCO1841_001 rdf:type owl:NamedIndividual ,
+                        :ManagedSystemElement ;
+               :hasLocation :M1_Riihimaki ;
+               :hasPhysicalElement :Cisco_1841_chassis ,
+                                   <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_10/100BASE-T_Ethernet_switch_HWIC> ;
+               :hasSoftwareIdentity :CISCO_IOS_12_4 ;
+               :InstallDate "2020-07-26T21:32:52"^^xsd:dateTime ;
+               :PrimaryStatus "OK" ;
+               :SerialNumber "FCZ122293NR"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Configuration_Software
-:Configuration_Software rdf:type owl:NamedIndividual ,
-                                 :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO1841_002
+:CISCO1841_002 rdf:type owl:NamedIndividual ,
+                        :ManagedSystemElement ;
+               :hasFRU :MEM1800-64CF ;
+               :hasLocation :M1_Riihimaki ;
+               :hasPhysicalElement :Cisco_1841_chassis ;
+               :hasSoftwareIdentity :CISCO_IOS_15_0 ;
+               :InstallDate "2020-07-26T21:32:52"^^xsd:dateTime ;
+               :PrimaryStatus "OK" ;
+               :SerialNumber "FCZ122294NR"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Critical_failure
-:Critical_failure rdf:type owl:NamedIndividual ,
-                           :HealthState .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO1841_003
+:CISCO1841_003 rdf:type owl:NamedIndividual ,
+                        :ManagedSystemElement ;
+               :hasLocation :M2_Riihimaki ;
+               :hasManagedSystemElement :Cisco_1841_chassis ,
+                                        <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_G.SHDSL_WIC> ,
+                                        <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_10/100BASE-T_Ethernet_switch_HWIC> ;
+               :hasSoftwareIdentity :CISCO_IOS_15_0 ;
+               :InstallDate "2020-07-26T21:32:52"^^xsd:dateTime ;
+               :PrimaryStatus "OK" ;
+               :SerialNumber "FCZ122295NR"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Diagnostic_Software
-:Diagnostic_Software rdf:type owl:NamedIndividual ,
-                              :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO3750_001
+:CISCO3750_001 rdf:type owl:NamedIndividual ,
+                        :ManagedSystemElement ;
+               :hasLocation :M2_Riihimaki ;
+               :hasPhysicalElement <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Catalyst_3750_48_10/100> ;
+               :hasSoftwareIdentity :CISCO_IOS_12_4 ;
+               :InstallDate "2020-07-26T21:32:52"^^xsd:dateTime ;
+               :PrimaryStatus "OK" ;
+               :SerialNumber "FCZ122296NR"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Dormant
-:Dormant rdf:type owl:NamedIndividual ,
-                  :OperatingStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO3750_002
+:CISCO3750_002 rdf:type owl:NamedIndividual ,
+                        :ManagedSystemElement ;
+               :hasLocation :M2_Riihimaki ;
+               :hasPhysicalElement <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Catalyst_3750_48_10/100> ;
+               :hasSoftwareIdentity :CISCO_IOS_15_0 ;
+               :InstallDate "2020-07-26T21:32:52"^^xsd:dateTime ;
+               :PrimaryStatus "OK" ;
+               :SerialNumber "FCZ122297NR"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Driver
-:Driver rdf:type owl:NamedIndividual ,
-                 :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO_1841
+:CISCO_1841 rdf:type owl:NamedIndividual ,
+                     :ManagedElement ;
+            :hasFRU :MEM1800-64CF ;
+            :hasManagedSystemElement :CISCO1841_001 ,
+                                     :CISCO1841_002 ,
+                                     :CISCO1841_003 ;
+            :Caption "Cisco 1841"^^xsd:string ;
+            :Description "Cisco 1841 Router"^^xsd:string ;
+            :ElementName "Cisco 1841 Router"^^xsd:string ;
+            :Generation "1"^^xsd:string ;
+            :Name "Router"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Error
-:Error rdf:type owl:NamedIndividual ,
-                :PrimaryStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO_CATALYST_3750
+:CISCO_CATALYST_3750 rdf:type owl:NamedIndividual ,
+                              :ManagedElement ;
+                     :hasManagedSystemElement :CISCO3750_001 ,
+                                              :CISCO3750_002 ;
+                     :Caption "Cisco Catalyst 3750"^^xsd:string ;
+                     :Description "Catalyst 3750V2-48PS Switch"^^xsd:string ;
+                     :ElementName "Cisco Catalyst 3750V2-48PS Switch"^^xsd:string ;
+                     :Generation "1"^^xsd:string ;
+                     :Name "Switch"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Firmware
-:Firmware rdf:type owl:NamedIndividual ,
-                   :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO_IOS_12_4
+:CISCO_IOS_12_4 rdf:type owl:NamedIndividual ,
+                         :SoftwareIdentity ;
+                :hasSPDX :IOS_BSD-3 ;
+                :hasSWID :Cisco_IOS ;
+                :ExtendedResourceType "zip"^^xsd:string ;
+                :LargeBuildNumber 12 ;
+                :MajorVersion 12 ;
+                :MinorVersion 4 ;
+                :ReleaseDate "2015-10-26T19:32:52+00:00"^^xsd:dateTime ;
+                :RevisionNumber 1 ;
+                :TargetOperatingSystems "IOS"^^xsd:string ;
+                :VersionString "12.4(1)S"^^xsd:string ;
+                rdfs:label "CISCO IOS"@fi .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#In_Service
-:In_Service rdf:type owl:NamedIndividual ,
-                     :OperatingStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#CISCO_IOS_15_0
+:CISCO_IOS_15_0 rdf:type owl:NamedIndividual ,
+                         :SoftwareIdentity ;
+                :hasSPDX :IOS_BSD-3 ;
+                :hasSWID :Cisco_IOS ;
+                :ExtendedResourceType "zip"^^xsd:string ;
+                :LargeBuildNumber 15 ;
+                :MajorVersion 0 ,
+                              15 ;
+                :ReleaseDate "2017-10-26T19:32:52+00:00"^^xsd:dateTime ;
+                :RevisionNumber 1 ;
+                :TargetOperatingSystems "IOS"^^xsd:string ;
+                :VersionString "15.0(1)S"^^xsd:string ;
+                rdfs:label "CISCO IOS"@fi .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#In_Test
-:In_Test rdf:type owl:NamedIndividual ,
-                  :OperatingStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Cisco1800
+:Cisco1800 rdf:type owl:NamedIndividual ,
+                    :Product ;
+           :SKU "IPM7W00CRA"^^xsd:string ;
+           :WarrantyDuration 600 ;
+           :WarrantyStartDate "2015-10-26T19:32:52+00:00"^^xsd:dateTime .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Instrumentation
-:Instrumentation rdf:type owl:NamedIndividual ,
-                          :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Cisco3750
+:Cisco3750 rdf:type owl:NamedIndividual ,
+                    :Product ;
+           :SKU "IPM7W33CRA"^^xsd:string ;
+           :WarrantyDuration 800 ;
+           :WarrantyStartDate "2012-09-13T14:12:00+00:00"^^xsd:dateTime .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Major_failure
-:Major_failure rdf:type owl:NamedIndividual ,
-                        :HealthState .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Cisco_1841_chassis
+:Cisco_1841_chassis rdf:type owl:NamedIndividual ,
+                             :PhysicalElement ;
+                    :ManufactureDate "2007-10-26T19:32:52+00:00"^^xsd:dateTime ;
+                    :Manufacturer "Cisco"^^xsd:string ;
+                    :Model "Router"^^xsd:string ;
+                    :OtherIdentifyingInfo "27568452"^^xsd:string ;
+                    :PartNumber "73-8191-66"^^xsd:string ;
+                    :Tag "FOC10466XVR"^^xsd:string ;
+                    :UserTracking "Z79263"^^xsd:string ;
+                    :VendorEquipmentType "Router"^^xsd:string ;
+                    :Version "4.0"^^xsd:string ,
+                             "V1"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Middleware
-:Middleware rdf:type owl:NamedIndividual ,
-                     :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Cisco_IOS
+:Cisco_IOS rdf:type owl:NamedIndividual ,
+                    :SWID ;
+           :EntitlementRequiredIndicator "false"^^xsd:boolean ;
+           :ProductTitle "Cisco IOS"^^xsd:string ;
+           :SoftwareCreator "Cisco Inc."^^xsd:string ;
+           :TagCreator "Cisco Inc."^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Migrating
-:Migrating rdf:type owl:NamedIndividual ,
-                    :OperatingStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#HPProliantDL380G6
+:HPProliantDL380G6 rdf:type owl:NamedIndividual ,
+                            :Product ;
+                   :SKU "IPM7W23CRA"^^xsd:string ;
+                   :WarrantyDuration 760 ;
+                   :WarrantyStartDate "2016-01-02T13:22:00+00:00"^^xsd:dateTime .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Minor_failure
-:Minor_failure rdf:type owl:NamedIndividual ,
-                        :HealthState .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#IOS_BSD-3
+:IOS_BSD-3 rdf:type owl:NamedIndividual ,
+                    :SPDX ;
+           :FullName "BSD-3-Clause"^^xsd:string ;
+           :Notes "The DPDK uses the Open Source BSD-3-Clause license for the core libraries and drivers."^^xsd:string ;
+           :Text """Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."""^^xsd:string ;
+           :WebPages "https://opensource.org/licenses/BSD-3-Clause"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Non-recoverable_error
-:Non-recoverable_error rdf:type owl:NamedIndividual ,
-                                :HealthState .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#M1_Riihimaki
+:M1_Riihimaki rdf:type owl:NamedIndividual ,
+                       :Location ;
+              :Address "Karjaportintie" ;
+              :PhysicalPosition "HY4"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#None
-:None rdf:type owl:NamedIndividual ,
-               :OperatingStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#M2_Riihimaki
+:M2_Riihimaki rdf:type owl:NamedIndividual ,
+                       :Location ;
+              :Address "Karjaportintie" ;
+              :PhysicalPosition "HY5"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#OK
-:OK rdf:type owl:NamedIndividual ,
-             :HealthState ,
-             :PrimaryStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MEM1800-128CF
+:MEM1800-128CF rdf:type owl:NamedIndividual ,
+                        :FRU .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Operating_System
-:Operating_System rdf:type owl:NamedIndividual ,
-                           :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MEM1800-64CF
+:MEM1800-64CF rdf:type owl:NamedIndividual ,
+                       :FRU .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Other
-:Other rdf:type owl:NamedIndividual ,
-                :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_G.SHDSL_WIC
+<http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_G.SHDSL_WIC> rdf:type owl:NamedIndividual ,
+                                                                                                 :PhysicalElement ;
+                                                                                        :ManufactureDate "2011-10-26T19:32:52+00:00"^^xsd:dateTime ;
+                                                                                        :Manufacturer "Cisco"^^xsd:string ;
+                                                                                        :Model "Interface card"^^xsd:string ;
+                                                                                        :OtherIdentifyingInfo "34567845"^^xsd:string ;
+                                                                                        :PartNumber "73-8191-11"^^xsd:string ;
+                                                                                        :Tag "FOC10481XVR"^^xsd:string ;
+                                                                                        :UserTracking "Z30673"^^xsd:string ;
+                                                                                        :VendorEquipmentType "One port G.shdsl WIC with 4-wire support"^^xsd:string ;
+                                                                                        :Version "5.0"^^xsd:string ,
+                                                                                                 "V3" .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Servicing
-:Servicing rdf:type owl:NamedIndividual ,
-                    :OperatingStatus .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_10/100BASE-T_Ethernet_switch_HWIC
+<http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#4-port_10/100BASE-T_Ethernet_switch_HWIC> rdf:type owl:NamedIndividual ,
+                                                                                                                       :PhysicalElement ;
+                                                                                                              :ManufactureDate "2001-10-26T19:32:52+00:00"^^xsd:dateTime ;
+                                                                                                              :Manufacturer "Cisco"^^xsd:string ;
+                                                                                                              :Model "Interface card"^^xsd:string ;
+                                                                                                              :OtherIdentifyingInfo "24234423"^^xsd:string ;
+                                                                                                              :PartNumber "73-8191-06"^^xsd:string ;
+                                                                                                              :Tag "FOC10485XVR"^^xsd:string ;
+                                                                                                              :UserTracking "Z43876"^^xsd:string ;
+                                                                                                              :VendorEquipmentType "Ethernet switch interface card"^^xsd:string ;
+                                                                                                              :Version "4.0"^^xsd:string ,
+                                                                                                                       "V2" .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Software_Bundle
-:Software_Bundle rdf:type owl:NamedIndividual ,
-                          :Classifications .
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Catalyst_3750_48_10/100
+<http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Catalyst_3750_48_10/100> rdf:type owl:NamedIndividual ,
+                                                                                                      :PhysicalElement ;
+                                                                                             :ManufactureDate "2011-10-26T19:32:52+00:00"^^xsd:dateTime ;
+                                                                                             :Manufacturer "Cisco"^^xsd:string ;
+                                                                                             :Model "Switch"^^xsd:string ;
+                                                                                             :OtherIdentifyingInfo "849776543"^^xsd:string ;
+                                                                                             :PartNumber "73-8191-22"^^xsd:string ;
+                                                                                             :Tag "FOC10455XVR"^^xsd:string ;
+                                                                                             :UserTracking "Z22865"^^xsd:string ;
+                                                                                             :VendorEquipmentType "Switch"^^xsd:string ;
+                                                                                             :Version "6.0"^^xsd:string ,
+                                                                                                      "V!"^^xsd:string .
 
 
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Transitioning
-:Transitioning rdf:type owl:NamedIndividual ,
-                        :OperatingStatus .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Unknown
-:Unknown rdf:type owl:NamedIndividual ,
-                  :HealthState ,
-                  :PrimaryStatus .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#BIOS/FCode
-<http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#BIOS/FCode> rdf:type owl:NamedIndividual ,
-                                                                                         :Classifications .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Degraded/Warning
-<http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Degraded/Warning> rdf:type owl:NamedIndividual ,
-                                                                                               :HealthState ,
-                                                                                               :PrimaryStatus .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Support/Service_Pack
-<http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Support/Service_Pack> rdf:type owl:NamedIndividual ,
-                                                                                                   :Classifications .
-
-
-[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
   ontodebug:type "true"^^xsd:boolean
 ] .
 
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "CISCO_CATALYST_3750 Caption \"Cisco Catalyst 3750\"^^string"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
 [ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ opla-sd:entityPositionX "215.7828295953237"^^xsd:double ;
+   opla-sd:entityPositionY "76.50558656596547"^^xsd:double ;
+   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
@@ -851,31 +1521,7 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
 [ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
@@ -883,59 +1529,15 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "false"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
 [ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
  ] .
 
@@ -943,183 +1545,19 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "false"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
 [ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
@@ -1127,7 +1565,51 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "CISCO_CATALYST_3750 Caption \"Cisco Catalyst 3750\"^^string"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
@@ -1139,295 +1621,15 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
 [ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+[ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
@@ -1435,7 +1637,35 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "true"^^xsd:boolean
  ] .
 
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
 [ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
  ] .
 
@@ -1447,38 +1677,1060 @@ Values: Unknown, OK, Degraded/Warning, Minor failure, Major failure, Critical fa
    ontodebug:type "true"^^xsd:boolean
  ] .
 
+[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
 [ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-#################################################################
-#    Annotations
-#################################################################
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
 
-:PrimaryStatus rdfs:comment """PrimaryStatus provides a high level status value, intended to align with Red-Yellow-Green type representation of status. It should be used in conjunction with DetailedStatus to provide high level and detailed health status of the ManagedElement and its subcomponents. PrimaryStatus consists of one of the following values: Unknown, OK, Degraded or Error. \"Unknown\" indicates the implementation is in general capable of returning this property, but is unable to do so at this time. \"OK\" indicates the ManagedElement is functioning normally. \"Degraded\" indicates the ManagedElement is functioning below normal. \"Error\" indicates the ManagedElement is in an Error condition.
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
 
-Values:Unknown, OK, Degraded, Error"""^^xsd:string .
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
 
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
 
-#################################################################
-#    General axioms
-#################################################################
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
 
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :FRU
-                :Location
-                :ManagedSystemElement
-                :Product
-              )
-] .
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
 
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
 
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :OperatingStatus
-                :PhysicalElement
-                :SoftwareIdentity
-              )
-] .
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
 
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "CISCO_CATALYST_3750 Caption \"Cisco Catalyst 3750\"^^string"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain Location"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "CISCO_CATALYST_3750 Caption \"Cisco Catalyst 3750\"^^string"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU and Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement DisjointWith Product"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SPDX"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Classifications SubClassOf Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "WarrantyDuration Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasLocation Range SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "OperatingStatus Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "CISCO_CATALYST_3750 Caption \"Cisco Catalyst 3750\"^^string"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Unknown Type Classifications"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Family Domain FRU"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Location SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Domain Product"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasFRU Range FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Manufacturer Domain SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Caption Domain FRU"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasName Domain ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "hasProduct Range SPDX"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
