@@ -33,17 +33,11 @@
                                                                                          [ ontodebug:axiom "Classifications DisjointWith OperatingStatus"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
-                                                                                         ] ,
                                                                                          [ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
-                                                                                         ] ,
-                                                                                         [ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
-                                                                                           ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
                                                                                          [ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
                                                                                            ontodebug:type "false"^^xsd:boolean
@@ -75,8 +69,41 @@
                                                                                          [ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
                                                                                          ] ,
-                                                                                         [ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
+                                                                                         [ ontodebug:axiom "FRU SubClassOf ManagedElement"^^xsd:string ;
                                                                                            ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "PhysicalElement SubClassOf SoftwareIdentity"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "FRU EquivalentTo Location"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "ManagedSystemElement SubClassOf ManagedElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "PhysicalElement DisjointWith SoftwareIdentity"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "SWID SubClassOf ManagedElement and ManagedSystemElement and SoftwareIdentity"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "SPDX SubClassOf ManagedElement and ManagedSystemElement and SoftwareIdentity"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "PhysicalElement SubClassOf ManagedElement and ManagedSystemElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "SoftwareIdentity SubClassOf ManagedElement and ManagedSystemElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "Product SubClassOf ManagedElement"^^xsd:string ;
+                                                                                           ontodebug:type "true"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "ManagedElement SubClassOf ManagedSystemElement"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
+                                                                                         ] ,
+                                                                                         [ ontodebug:axiom "FRU DisjointWith Location"^^xsd:string ;
+                                                                                           ontodebug:type "false"^^xsd:boolean
                                                                                          ] .
 
 #################################################################
@@ -203,16 +230,6 @@ opla-sd:entityPositionY rdf:type owl:AnnotationProperty .
              rdfs:domain :ManagedElement ;
              rdfs:range xsd:string ;
              rdfs:comment "A user-friendly name for the object. This property allows each instance to define a user-friendly name in addition to its key properties, identity data, and description information. Note that the Name property of ManagedSystemElement is also defined as a user-friendly name."^^xsd:string .
-
-
-###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#EntitlementRequiredIndicator
-:EntitlementRequiredIndicator rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf owl:topDataProperty ;
-                              rdfs:domain :SWID ;
-                              rdfs:range xsd:boolean ;
-                              rdfs:comment """Identifies whether this application needs to match up with an entitlement for a reconciliation to be considered successful. Specifies if an entitlement is required to reconcile this application. See ISO/IEC 19770-2:2009 for guidance.
-Example data format:
-XX = entitlement status (true = entitlement required; false = no entitlement required)"""^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ExtendedResourceType
@@ -356,7 +373,7 @@ XX = entitlement status (true = entitlement required; false = no entitlement req
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:domain :Location ;
                   rdfs:range xsd:string ;
-                  rdfs:comment "Position is a free-form string that indicates the placement of a PhysicalElement. It can specify slot information on a HostingBoard, mounting site in a Cabinet, or latitude and longitude information, for example, from a GPS. It is part of the key of the Location object."^^xsd:string .
+                  rdfs:comment "Position is a free-form string that indicates the placement of a PhysicalElement. It can specify slot information on a HostingBoard, mounting site in a Cabinet, or latitude and longitude information, for example, from a GPS."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PrimaryStatus
@@ -566,12 +583,13 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
                               opla-sd:entityPositionY "45.88204538672695"^^xsd:double ;
                               rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
                             ] ;
-     rdfs:comment "The FRU class is a vendor-defined collection of Products and/or PhysicalElements that is associated with a Product for the purpose of supporting, maintaining or upgrading that Product at the customer's location. FRU is an acronym for 'field replaceable unit'."^^xsd:string .
+     rdfs:comment "The FRU is a collection of physical elements, defined by a supplier, associated with a managed element to support, maintain, or update that managed element at the customer's location FRU is an acronym for 'field replaceable unit'."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Location
 :Location rdf:type owl:Class ;
-          rdfs:subClassOf :ManagedSystemElement .
+          rdfs:subClassOf :ManagedSystemElement ;
+          rdfs:comment "The Location class specifies the position and address of a PhysicalElement."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#ManagedElement
@@ -591,7 +609,7 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
                                                opla-sd:entityPositionY "400.1452533215478"^^xsd:double ;
                                                rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
                                              ] ;
-                      rdfs:comment "Any distinguishable component of a System is a candidate for inclusion in this class. Examples of system components include: - software components such as application servers, databases, and applications - operating system components such as files, processes, and threads - device components such as disk drives, controllers, processors, and printers - physical components such as chips and cards."^^xsd:string .
+                      rdfs:comment "Any distinguishable component of SOI is a candidate for inclusion in this class. Examples of system components include: - software components such as application servers, databases, and applications - operating system components such as files, processes, and threads - device components such as disk drives, controllers, processors, and printers - physical components such as chips and cards."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#PhysicalElement
@@ -602,7 +620,7 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
                                           opla-sd:entityPositionY "129.97908426746073"^^xsd:double ;
                                           rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
                                         ] ;
-                 rdfs:comment "Instances of this class can be defined as an object that can be seen or touched. All Processes, Files, and LogicalDevices are considered not to be Physical Elements. For example, it is not possible to touch the functionality of a 'modem.' You can touch only the card or package that implements the modem. The same card could also implement a LAN adapter. PhysicalElements are tangible ManagedSystemElements that have a physical manifestation of some sort. Note that the properties of PhysicalElement describe a hardware entity. Possible replacement (FRU) information is defined by FRU association. This definition allows a client to determine what hardware can be replaced (FRUed) and what 'spare' parts might be required by a customer or engineer doing the replacement."^^xsd:string .
+                 rdfs:comment "Instances of this class can be defined as an object that can be seen or touched. All Processes, Files, and LogicalDevices are considered not to be Physical Elements. For example, it is not possible to touch the functionality of a 'modem.' You can touch only the card or package that implements the modem. The same card could also implement a LAN adapter. PhysicalElements are tangible ManagedSystemElements that have a physical manifestation of some sort. Note that the properties of PhysicalElement describe a hardware entity."^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Product
@@ -612,7 +630,7 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
                                   opla-sd:entityPositionY "37.8752209545502"^^xsd:double ;
                                   rdfs:comment "This is an entity positioning annotation generated by CoModIDE (https://comodide.com/). Removing this annotation will break rendering the CoModIDE schema diagram view."@en
                                 ] ;
-         rdfs:comment "Product is a concrete class that aggregates PhysicalElements, SoftwareIdentity and/or other Products, and is acquired as a unit. Acquisition implies an agreement between supplier and consumer which may have implications to Product licensing, support and warranty."^^xsd:string .
+         rdfs:comment "A product is a concrete category that combines physical elements and software identity and is acquired as a single entity"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#SPDX
@@ -800,7 +818,6 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#Cisco_IOS
 :Cisco_IOS rdf:type owl:NamedIndividual ,
                     :SWID ;
-           :EntitlementRequiredIndicator "false"^^xsd:boolean ;
            :ProductTitle "Cisco IOS"^^xsd:string ;
            :SoftwareCreator "Cisco Inc."^^xsd:string ;
            :TagCreator "Cisco Inc."^^xsd:string .
@@ -843,6 +860,20 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
                        :Location ;
               :Address "Karjaportintie" ;
               :PhysicalPosition "HY5"^^xsd:string .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#M3_Karjaportintie
+:M3_Karjaportintie rdf:type owl:NamedIndividual ,
+                            :Location ;
+                   :Address "Karjaportintie"^^xsd:string ;
+                   :PhysicalPosition "M3"^^xsd:string .
+
+
+###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#M4_Karjaportintie
+:M4_Karjaportintie rdf:type owl:NamedIndividual ,
+                            :Location ;
+                   :Address "Karjaportintie"^^xsd:string ;
+                   :PhysicalPosition "M4"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#MEM1800-128CF
@@ -932,20 +963,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
    ontodebug:type "true"^^xsd:boolean
  ] .
 
-[ ontodebug:axiom "SPDX SubClassOf ManagedSystemElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
 [ ontodebug:axiom "SoftwareCreator Domain PhysicalElement"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
  ] .
 
 [ ontodebug:axiom "FRU SubClassOf ManagedSystemElement"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "SerialNumber Domain PhysicalElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
  ] .
 
 [ ontodebug:axiom "SPDX EquivalentTo SWID"^^xsd:string ;
@@ -985,10 +1008,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
  ] .
 
 [ ontodebug:axiom "hasProduct Range ManagedElement"^^xsd:string ;
-   ontodebug:type "true"^^xsd:boolean
- ] .
-
-[ ontodebug:axiom "Name Domain PhysicalElement"^^xsd:string ;
    ontodebug:type "true"^^xsd:boolean
  ] .
 
@@ -2730,6 +2749,54 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AN
  ] .
 
 [ ontodebug:axiom "Product SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "PhysicalElement SubClassOf SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU EquivalentTo Location"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedSystemElement SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "PhysicalElement DisjointWith SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SWID SubClassOf ManagedElement and ManagedSystemElement and SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SPDX SubClassOf ManagedElement and ManagedSystemElement and SoftwareIdentity"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "PhysicalElement SubClassOf ManagedElement and ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "SoftwareIdentity SubClassOf ManagedElement and ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "Product SubClassOf ManagedElement"^^xsd:string ;
+   ontodebug:type "true"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "ManagedElement SubClassOf ManagedSystemElement"^^xsd:string ;
+   ontodebug:type "false"^^xsd:boolean
+ ] .
+
+[ ontodebug:axiom "FRU DisjointWith Location"^^xsd:string ;
    ontodebug:type "false"^^xsd:boolean
  ] .
 
