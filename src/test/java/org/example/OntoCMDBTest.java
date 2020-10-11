@@ -36,34 +36,23 @@ class OntoCMDBTest {
 		try (RepositoryConnection conn = db.getConnection()) {
 
 			String query = "PREFIX : <http://www.semanticweb.org/defaultuser/ontologies/2020/7/Onto-CMDB#> \n"
-		            +  "SELECT DISTINCT (strafter(str(?s), \"#\") as ?fragment)  WHERE {?s a owl:Class} \n";	
-			
-							
-			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);
-			
-			String[] header = {"Classes"};
-			
+		            +  "SELECT DISTINCT (strafter(str(?s), \"#\") as ?fragment)  WHERE {?s a owl:Class} \n";								
+			TupleQuery tupleQuery = conn.prepareTupleQuery(QueryLanguage.SPARQL,query);		
+			String[] header = {"Classes"};		
 			fileWriter = new FileWriter("C:/TEMP/test.csv", false);
 			CSVWriter csvWriter = new CSVWriter(fileWriter, ',', CSVWriter.NO_QUOTE_CHARACTER, 
-                    CSVWriter.NO_ESCAPE_CHARACTER, CSVWriter.DEFAULT_LINE_END);
-			
-			csvWriter.writeNext(header);
-			
+                    CSVWriter.NO_ESCAPE_CHARACTER, CSVWriter.DEFAULT_LINE_END);		
+			csvWriter.writeNext(header);			
 			try (TupleQueryResult res = tupleQuery.evaluate()) {
 				int count = 0;
 
 		         while (res.hasNext()) {
 					BindingSet solution = res.next();
-						System.out.println("?s = " + solution.getValue("fragment"));
 						count++;		
 						csvWriter.writeNext(new String[]{solution.getValue("fragment").toString()});
-
 		         }
 		         assertEquals(9, count);
-
-		         csvWriter.close();
-		        
-		         
+		         csvWriter.close();	         
 			} finally {
 			conn.close();
 			db.shutDown();
