@@ -134,8 +134,7 @@ class OntoCMDBTest {
 			BooleanQuery booleanQuery = conn.prepareBooleanQuery(QueryLanguage.SPARQL,query);
 			
 			assert(booleanQuery.evaluate());
-			ResultSetFormatter.outputAsCSV(booleanQuery.evaluate());
-
+			
 			conn.close();
 			db.shutDown();
 		}
